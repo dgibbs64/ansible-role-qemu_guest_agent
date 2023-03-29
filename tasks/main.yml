@@ -1,6 +1,6 @@
 ---
 - name: Gather facts
-  when: ansible_facts is not defined
+  when: ansible_facts['discovered_interpreter_python'] is not defined
   ansible.builtin.setup:
 
 - name: Install qemu_guest_agent
