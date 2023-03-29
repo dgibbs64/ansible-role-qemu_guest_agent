@@ -24,7 +24,7 @@ galaxy_info:
         - "8"
         - "9"
   galaxy_tags:
-    - molecule
-    - apache
+    - system
+    - qemu
 
 dependencies: []
