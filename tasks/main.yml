@@ -3,8 +3,14 @@
   when: ansible_facts['discovered_interpreter_python'] is not defined
   ansible.builtin.setup:
 
+- name: "Update apt cache (Debian Family)"
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+  when: ansible_os_family == "Debian"
+
 - name: Install qemu_guest_agent
   when: ansible_system_vendor == 'QEMU'
-  ansible.builtin.yum:
+  ansible.builtin.package:
     name: qemu-guest-agent
     state: present
