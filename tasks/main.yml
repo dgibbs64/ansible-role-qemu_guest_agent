@@ -1,6 +1,7 @@
 ---
 - name: Gather facts
-  when: ansible_facts['discovered_interpreter_python'] is not defined
+  when:
+    - ansible_facts['ansible_os_family'] is not defined or ansible_facts['ansible_system_vendor'] is not defined
   ansible.builtin.setup:
 
 - name: "Update apt cache (Debian Family)"
