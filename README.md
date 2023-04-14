@@ -1,6 +1,6 @@
 # qemu_guest_agent
 
-An [Ansible](https://www.ansible.com) role that installs qemu-guest-agent on Linux when running a qemu virtual machine.
+An [Ansible](https://www.ansible.com) role that detects QEMU and installs qemu-guest-agent on Linux when required on a qemu virtual machine.
 
 QEMU (Quick EMUlator) is a free and open-source emulator and virtualization software. Used by many popular virtualisation platforms such as [Proxmox](https://www.proxmox.com/en/), [VirtualBox](https://www.virtualbox.org/), [KVM](https://www.linux-kvm.org/page/Main_Page), [Xen](https://xenproject.org/), [OpenStack](https://www.openstack.org/) and more.
 
