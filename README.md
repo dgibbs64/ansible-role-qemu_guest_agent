@@ -1,6 +1,10 @@
 # qemu_guest_agent
 
-An [Ansible](https://www.ansible.com) role that installs qemu-guest-agent when running a qemu virtual machine.
+An [Ansible](https://www.ansible.com) role that installs qemu-guest-agent on Linux when running a qemu virtual machine.
+
+QEMU (Quick EMUlator) is a free and open-source emulator and virtualization software. Used by many popular virtualisation platforms such as [Proxmox](https://www.proxmox.com/en/), [VirtualBox](https://www.virtualbox.org/), [KVM](https://www.linux-kvm.org/page/Main_Page), [Xen](https://xenproject.org/), [OpenStack](https://www.openstack.org/) and more.
+
+The `qemu-guest-agent` is a helper daemon, which is installed on the guest (virtual machine). It is used to exchange information between the host and guest, and to execute commands in the guest.
 
 Packages installed:
 
@@ -10,7 +14,7 @@ Packages installed:
 <a href="https://galaxy.ansible.com/dgibbs64/qemu_guest_agent"><img alt="Ansible Quality Score" src="https://img.shields.io/ansible/quality/61041?logo=ansible&style=flat-square"></a>
 <a href="https://galaxy.ansible.com/dgibbs64/qemu_guest_agent"><img alt="Ansible Role" src="https://img.shields.io/ansible/role/d/61041?color=EE0000&logo=ansible&style=flat-square"></a>
 <a href="https://galaxy.ansible.com/dgibbs64/qemu_guest_agent"><img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/dgibbs64/ansible-role-qemu_guest_agent?color=EE0000&label=release&logo=ansible&style=flat-square"></a>
-<a href="/LICENSE.md"><img src="https://img.shields.io/github/license/dgibbs64/ansible-role-qemu_guest_agent?style=flat-square" alt="MIT License"></a>
+<a href="https://github.com/dgibbs64/ansible-role-qemu_guest_agent/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/dgibbs64/ansible-role-qemu_guest_agent?style=flat-square" alt="MIT License"></a>
 </p>
 
 ## Requirements
