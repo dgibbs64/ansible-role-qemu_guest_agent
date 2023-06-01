@@ -1,14 +1,13 @@
 ---
 - name: Gather facts
-  when:
-    - ansible_facts['ansible_os_family'] is not defined or ansible_facts['ansible_system_vendor'] is not defined
+  when: ansible_facts['ansible_os_family'] is not defined or ansible_facts['ansible_system_vendor'] is not defined
   ansible.builtin.setup:
 
 - name: "Update apt cache (Debian Family)"
+  when: ansible_os_family == "Debian"
   ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 3600
-  when: ansible_os_family == "Debian"
 
 - name: Install qemu_guest_agent
   when: ansible_system_vendor == 'QEMU'

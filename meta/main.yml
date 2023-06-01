@@ -2,7 +2,7 @@
 galaxy_info:
   author: Daniel Gibbs
   company: none
-  description: An example role to test molecule (Installs Apache)
+  description: An Ansible role that detects QEMU and installs qemu-guest-agent on Linux when required on a qemu virtual machine.
   license: MIT
   min_ansible_version: "2.12"
   namespace: dgibbs64
