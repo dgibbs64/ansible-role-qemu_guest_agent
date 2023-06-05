@@ -1,5 +1,5 @@
 ---
-- name: Gather facts
+- name: "Gather facts"
   when: ansible_facts['ansible_os_family'] is not defined or ansible_facts['ansible_system_vendor'] is not defined
   ansible.builtin.setup:
 
@@ -9,7 +9,7 @@
     update_cache: true
     cache_valid_time: 3600
 
-- name: Install qemu_guest_agent
+- name: "Install qemu_guest_agent"
   when: ansible_system_vendor == 'QEMU'
   ansible.builtin.package:
     name: qemu-guest-agent
