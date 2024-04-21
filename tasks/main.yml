@@ -6,12 +6,14 @@
   when: ansible_facts|default({}) == {}
 
 - name: "Update apt cache (Debian Family)"
+  become: true
   ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 3600
   when: ansible_os_family == "Debian"
 
 - name: "Ensure qemu_guest_agent is installed"
+  become: true
   ansible.builtin.package:
     name: qemu-guest-agent
     state: present
