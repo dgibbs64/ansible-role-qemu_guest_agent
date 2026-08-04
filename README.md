@@ -30,7 +30,7 @@ None.
 
 ```yaml
 ---
-- name: Linux Admin Packages
+- name: Qemu Guest Agent
   hosts: all
   roles:
     - role: "dgibbs64.qemu_guest_agent"
